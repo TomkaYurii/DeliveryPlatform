@@ -69,6 +69,7 @@ namespace Drivers.Api.Controllers
         [HttpPost]
         public async Task<ActionResult> PostDriverAsync([FromBody] AddAllInfoAboutDriverDTO model)
         {
+
             try
             {
                 if (model == null)
