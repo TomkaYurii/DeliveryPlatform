@@ -10,7 +10,7 @@ namespace Drivers.DAL.Contracts
     public interface IDriverRepository :IGenericRepository<Driver>
     {
         Task<IEnumerable<Driver>> GetAllDrivers();
-        Task<IEnumerable<Driver>> GetDriversInfo();
+        Task<Driver> GetDriversInfo();
         Task<IEnumerable<Driver>> GetTop5DriversByRating();
     }
 }

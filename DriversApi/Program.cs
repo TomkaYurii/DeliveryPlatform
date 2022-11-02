@@ -25,7 +25,9 @@ using System.Data;
     });
 
 // Dependendency Injection for Repositories/UOW from ADO.NET DAL
-builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<IDriverRepository, DriverRepository>();
+builder.Services.AddScoped<IDriverLicenseRepository, DriverLicenseRepository>();
+builder.Services.AddScoped<ICarRepository, CarRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 

@@ -5,16 +5,21 @@ namespace MyEventsAdoNetDB.Repositories
 {
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        public IEventRepository _eventRepository { get; }
         public IDriverRepository _driverRepository { get; }
- 
+        public IDriverLicenseRepository _driverLicenseRepository { get; }
+        public ICarRepository _carRepository { get; }
+
         readonly IDbTransaction _dbTransaction;
 
         public UnitOfWork(
-            IEventRepository eventRepository,
+            IDriverRepository driverRepository,
+            IDriverLicenseRepository driverLicenseRepository,
+            ICarRepository carRepository,
             IDbTransaction dbTransaction)
         {
-            _eventRepository = eventRepository;
+            _driverRepository = driverRepository;
+            _driverLicenseRepository = driverLicenseRepository;
+            _carRepository = carRepository;
             _dbTransaction = dbTransaction;
         }
 

@@ -27,15 +27,16 @@ namespace Drivers.DAL.Repositories
            
         }
 
-        public async Task<IEnumerable<Driver>> GetDriversInfo()
+        public async Task<Driver> GetDriversInfo()
         {
-            string sql = @"SELECT Name, Surname , Driver_Id, Country_Id, Rating_Id, DriverLicense_Id , Car_Id 
-                FROM Driver, Car, Country, Rating, DriverLicense
-                Where Driver.Car_Id=Car.Id, Driver.Country_Id=Country.Id, Driver.Rating_Id=Rating.Id, Driver.DriverLicense_Id=DriverLicense.Id";
+            //string sql = @"SELECT Name, Surname , Driver_Id, Country_Id, Rating_Id, DriverLicense_Id , Car_Id 
+            //    FROM Driver, Car, Country, Rating, DriverLicense
+            //    Where Driver.Car_Id=Car.Id, Driver.Country_Id=Country.Id, Driver.Rating_Id=Rating.Id, Driver.DriverLicense_Id=DriverLicense.Id";
 
-            var results = await _sqlConnection.QueryAsync<Driver>(sql,
-                transaction: _dbTransaction);
-            return results;
+            //var results = await _sqlConnection.QueryAsync<Driver>(sql,
+            //    transaction: _dbTransaction);
+            //return results;
+            return new Driver();
 
         }
         public async Task<IEnumerable<Driver>> GetTop5DriversByRating()

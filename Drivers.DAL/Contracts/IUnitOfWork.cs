@@ -2,7 +2,9 @@
 {
     public interface IUnitOfWork : IDisposable
     {
-        IEventRepository _eventRepository { get; }
+        IDriverRepository _driverRepository { get; }
+        IDriverLicenseRepository _driverLicenseRepository { get; }
+        ICarRepository _carRepository { get; }
 
         void Commit();
         void Dispose();

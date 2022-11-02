@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Drivers.DAL.Entities
+namespace Drivers.BLL.DTOs
 {
-    public  class Driver : BaseEntity
+    public class AddAllInfoAboutDriverDTO
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -14,7 +14,17 @@ namespace Drivers.DAL.Entities
         public string Phone { get; set; }
         public string Experience { get; set; }
 
-        public int Car_Id { get; set; }
-        public int DriverLicense_Id { get; set; }
+
+        // public int LicenseId { get; set; }
+        public string Type { get; set; }
+        public DateTime ExpiryDate { get; set; }
+
+
+        public string Model { get; set; }
+        public string PlateNumber { get; set; }
+        public int Max_weight { get; set; }
+
+
+
     }
 }

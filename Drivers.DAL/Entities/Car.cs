@@ -10,7 +10,7 @@ namespace Drivers.DAL.Entities
     {
         public string Model { get; set; }
         public string PlateNumber { get; set; }
-        public string Color {get; set; }
+        public int Max_weight { get; set; }
 
     }
 }
