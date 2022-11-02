@@ -6,6 +6,7 @@ namespace MyEventsAdoNetDB.Repositories
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
         public IEventRepository _eventRepository { get; }
+        public IDriverRepository _driverRepository { get; }
  
         readonly IDbTransaction _dbTransaction;
 

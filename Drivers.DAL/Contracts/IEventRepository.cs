@@ -1,4 +1,4 @@
-﻿using Drivers.Entities;
+﻿using Drivers.DAL.Entities;
 
 namespace Drivers.DAL.Contracts
 {

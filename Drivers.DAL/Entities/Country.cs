@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Drivers.DAL.Entities
 {
-    public class Event : BaseEntity
+    public class Country :BaseEntity
     {
         public string Name { get; set; }
-        public int User_id { get; set; }
-        public int Country_id { get; set; }
-        public int City_id { get; set; }
-        public int Gallery_id { get; set; }
     }
 }

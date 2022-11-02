@@ -1,4 +1,4 @@
-﻿namespace Drivers.Entities
+﻿namespace Drivers.DAL.Entities
 {
     public class BaseEntity
     {

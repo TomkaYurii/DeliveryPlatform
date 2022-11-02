@@ -1,5 +1,5 @@
 ﻿using Drivers.DAL.Contracts;
-using Drivers.Entities;
+using Drivers.DAL.Entities;
 using Microsoft.Data.SqlClient;
 using System.Data;
 

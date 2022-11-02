@@ -5,6 +5,7 @@ using Dapper;
 using System.ComponentModel;
 using Drivers.DAL.Contracts;
 using Microsoft.Data.SqlClient;
+using Drivers.DAL.Entities;
 
 namespace Drivers.DAL.Repositories
 {
@@ -124,6 +125,11 @@ namespace Drivers.DAL.Repositories
                 .Append(")");
             insertQuery.Append("; SELECT SCOPE_IDENTITY()");
             return insertQuery.ToString();
+        }
+
+        public Task<IEnumerable<Driver>> GetAllDrivers()
+        {
+            throw new NotImplementedException();
         }
     }
 }

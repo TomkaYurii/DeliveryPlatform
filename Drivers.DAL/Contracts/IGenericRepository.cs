@@ -1,4 +1,6 @@
-﻿namespace Drivers.DAL.Contracts
+﻿using Drivers.DAL.Entities;
+
+namespace Drivers.DAL.Contracts
 {
     public interface IGenericRepository<T>
     {
@@ -8,5 +10,6 @@
         Task<int> AddRangeAsync(IEnumerable<T> list);
         Task ReplaceAsync(T t);
         Task<int> AddAsync(T t);
+        Task<IEnumerable<Driver>> GetAllDrivers();
     }
 }
